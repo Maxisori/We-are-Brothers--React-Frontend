@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+.app {
+  font-family: Arial, sans-serif;
+}
+
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.cart-items {
+  list-style: none;
+  padding: 0;
+}
+
+.cart button {
+  display: block;
+  margin-top: 10px;
+}

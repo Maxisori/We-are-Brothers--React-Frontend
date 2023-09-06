@@ -1,11 +1,11 @@
 import "./body.css";
+import {Link} from "react-router-dom";
 import Foto from '../../multimedia/image.png'
 export default function body(){
     return(
         <>
         <div>
-            <a class="boton" href="https://www.canva.com/projects" 
-            target="_blank"> VER TIENDA</a>
+            <Link to= "/" class="boton" target="blank"  VER TIENDA></Link>
         </div>
 
         <div class="Ropa Oversise Inicio">
