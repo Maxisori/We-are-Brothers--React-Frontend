@@ -5,7 +5,7 @@ export default function body(){
     return(
         <>
         <div>
-            <Link to= "/" class="boton" target="blank"  VER TIENDA></Link>
+            <Link to= "/" class="boton" target="blank">  VER TIENDA</Link>
         </div>
 
         <div class="Ropa Oversise Inicio">

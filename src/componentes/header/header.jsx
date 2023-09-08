@@ -6,18 +6,17 @@ export default function Header (){
             <div class="header" >
                 <div>
                     <ul class= "ulNav">
-                    <li class="linav"> Envios <Link to= "/"></Link></li> 
-                    <li class="linav"> Redes Sociales <Link to= "/"></Link></li> 
+                        <li class="linav"><Link to= "/Envios"> Envios </Link></li> 
+                        <li class="linav"><Link to= "/Redes"> Redes Sociales </Link></li> 
                     </ul>
                 </div>
             </div>
             <div class="header">
-            <li class="h1title"> WE ARE <br/> BROTHERS <Link to= "/"></Link></li> 
+                <h1 class="h1title"><Link to= "/"> WE ARE <br/> BROTHERS </Link></h1>
                 <div class="header">
                     <ul class="ulNav">
-                    <li class="linav"> Iniciar Sesion <Link to= "/"></Link></li> 
-                    <li class="linav"> Carrito <Link to= "/cart"></Link></li> 
-
+                        <li class="linav"><Link to= "/Log in"> Iniciar Sesion </Link></li> 
+                        <li class="linav"><Link to= "/cart"> Carrito </Link></li> 
                     </ul>
                 </div>
             </div>    
