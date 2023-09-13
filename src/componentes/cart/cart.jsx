@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './cart.css'
 
 function Cart() {
     const [items, setItems] = useState([]);
@@ -19,7 +20,6 @@ function Cart() {
     };
 
     const goToPayment = () => {
-        // acá va la lógica para ir a la página de pago
         alert('Ir a la página de pago');
     };
 
@@ -27,9 +27,9 @@ function Cart() {
         <div>
             <h1>Carrito de Compras</h1>
             <div>
-                <button onClick={addItem}>Agregar Ítem</button>
-                <button onClick={deleteAllItems}>Eliminar Todo</button>
-                <button onClick={goToPayment}>Ir a Pagar</button>
+                <button className="botones" onClick={addItem}>Agregar Ítem</button>
+                <button className="botones" onClick={deleteAllItems}>Eliminar Todo</button>
+                <button className="botones" onClick={goToPayment}>Ir a Pagar</button>
             </div>
             <ul>
                 {items.map((item, index) => (
@@ -42,7 +42,4 @@ function Cart() {
         </div>
     );
 }
-
-
-
 export default Cart;

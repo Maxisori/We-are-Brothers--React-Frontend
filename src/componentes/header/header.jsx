@@ -15,7 +15,7 @@ export default function Header (){
                 <h1 class="h1title"><Link to= "/"> WE ARE <br/> BROTHERS </Link></h1>
                 <div class="header">
                     <ul class="ulNav">
-                        <li class="linav"><Link to= "/Log in"> Iniciar Sesion </Link></li> 
+                        <li class="linav"><Link to= "/Login"> Iniciar Sesion </Link></li> 
                         <li class="linav"><Link to= "/cart"> Carrito </Link></li> 
                     </ul>
                 </div>
