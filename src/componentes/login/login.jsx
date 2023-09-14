@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import "./login.css";
+import { Link } from 'react-router-dom'; // Importa Link de react-router-dom
+import './login.css'; // Importa los estilos compartidos
 
-const LoginForm = ({ onRegisterClick }) => {
+const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -11,8 +12,8 @@ const LoginForm = ({ onRegisterClick }) => {
   };
 
   return (
-    <div className="todo">
-      <h2>Iniciar sesión</h2>
+    <div className="todo"> {/* Aplica la clase 'todo' del CSS compartido */}
+      <h2 className="registro">Iniciar sesión</h2> {/* Aplica la clase 'registro' del CSS compartido */}
       <form>
         <label>Email:</label>
         <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
@@ -22,7 +23,7 @@ const LoginForm = ({ onRegisterClick }) => {
         <br />
         <button type="button" onClick={handleLogin}>Iniciar sesión</button>
       </form>
-      <p>No tiene cuenta, <span onClick={onRegisterClick}>regístrese</span></p>
+      <p>No tiene cuenta, <Link to="/registro">regístrese</Link></p>
     </div>
   );
 };

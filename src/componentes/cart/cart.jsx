@@ -26,16 +26,16 @@ function Cart() {
     return (
         <div>
             <h1>Carrito de Compras</h1>
-            <div>
-                <button className="botones" onClick={addItem}>Agregar Ítem</button>
-                <button className="botones" onClick={deleteAllItems}>Eliminar Todo</button>
-                <button className="botones" onClick={goToPayment}>Ir a Pagar</button>
-            </div>
+                <div className='conteiner'>
+                    <button className="boton" onClick={addItem}>Agregar Ítem</button>
+                    <button className="boton" onClick={deleteAllItems}>Eliminar Todo</button>
+                    <button className="boton" onClick={goToPayment}>Ir a Pagar</button>
+                </div>
             <ul>
                 {items.map((item, index) => (
                     <li key={index}>
                         {item}
-                        <button onClick={() => deleteItem(index)}>X</button>
+                        <button onClick={() => deleteItem(index)} className='X'>X</button>
                     </li>
                 ))}
             </ul>

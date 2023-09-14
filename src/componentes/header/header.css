@@ -1,34 +1,48 @@
 * {
     margin: 0;
-    padding: 0;    
+    padding: 0;
     box-sizing: border-box;
 }
-.header, .ulNav {
+
+.sectionMain {
+    background-color: white;
+    padding: 35px;
     display: flex;
-    flex-direction: row;
-    flex-direction: row;
-    background-color: #ffff
+    justify-content: space-between;
+    align-items: center;
 }
+
 .ulNav {
-    list-style-type: none;
-    font-family: 'Gilda Display', serif;
-    font-family: 'Lora', serif;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px    
+    display: flex;
+    align-items: center;
 }
+
 .linav {
-    margin: 2rem;
-    padding: 0%;
-    font-family: 'Gilda Display', serif;   
+    text-decoration: none;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: 20px;
+    white-space: nowrap;
 }
+
 .h1title {
-    margin: 1rem;
-    padding: 3px;
-    text-align: center; 
+    display: flex;
+    justify-content: center;
+    margin: 1px;
+    text-align: center;
     font-family: 'Gilda Display', serif;
     font-size: 40px;
-    line-height: 0.8;   
-    text-decoration: none; 
-    color: inherit; 
+    line-height: 0.8;
+}
+
+.h1title a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.linav a {
+    text-decoration: none;
+    color: inherit;
     cursor: pointer;
 }

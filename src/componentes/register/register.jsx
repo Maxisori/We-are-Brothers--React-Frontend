@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; 
+import './register.css'; // Importa los estilos CSS
 
-const RegisterForm = ({ onLoginClick }) => {
+const RegisterForm = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -14,8 +16,8 @@ const RegisterForm = ({ onLoginClick }) => {
   };
 
   return (
-    <div>
-      <h2>Registro</h2>
+    <div className="register-form"> 
+      <h2 className="registro">Registro</h2>
       <form>
         <label>Nombre de usuario:</label>
         <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
@@ -31,7 +33,7 @@ const RegisterForm = ({ onLoginClick }) => {
         <br />
         <button type="button" onClick={handleRegister}>Registrarse</button>
       </form>
-      <p>¿Ya tienes una cuenta? <span onClick={onLoginClick}>Iniciar sesión</span></p>
+      <p>¿Ya tienes una cuenta? <Link to="/login">Iniciar sesión</Link></p> {/* Enlace a la página de inicio de sesión */}
     </div>
   );
 };

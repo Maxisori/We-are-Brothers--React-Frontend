@@ -1,63 +1,65 @@
 .todo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 70vh;
-    font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
 }
-  
 
 form {
-    width: 300px;
-    padding: auto;
-    border: 2px solid #ccc;
-    background-color: #f9f9f9;
-}     
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
 h2 {
-    text-align: center;
-    color: black;
+  text-align: center;
+  color: #007bff;
 }
-  
+
 label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
-  
+
 input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
-  
+
 button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
 }
-  
+
 button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
-  
+
 p {
-    text-align: center;
-    margin-top: 10px;
+  text-align: center;
+  margin-top: 10px;
 }
-  
-  
+
+/* Estilos para el enlace de cambio entre formularios */
 span {
-    color: #007bff;
-    text-decoration: underline;
-    cursor: pointer;
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
 }
-  
+
 span:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
