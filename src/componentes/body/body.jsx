@@ -5,7 +5,7 @@ export default function Body() {
   return (
     <div className="centered-container">
       <p className="Texto">Ropa Oversize</p>
-      <button className="centered-button" onClick={() => { /* Agrega aquí la lógica de redirección o acción que deseas */ }}>
+      <button className="centered-button" onClick={() => {}}>
         VER TIENDA
       </button>
     </div>

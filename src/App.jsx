@@ -6,7 +6,6 @@ import Header from './componentes/header/header';
 import Body from './componentes/body/body';
 import Login from './componentes/login/login';
 import Register from './componentes/register/register'; 
-
 function App() {
   return (
     <>

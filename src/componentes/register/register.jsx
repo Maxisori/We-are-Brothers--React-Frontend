@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; 
-import './register.css'; // Importa los estilos CSS
+import './register.css';
 
 const RegisterForm = () => {
   const [username, setUsername] = useState('');

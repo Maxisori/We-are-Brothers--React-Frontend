@@ -1,6 +1,6 @@
-h1 {
+.carrito {
     font-size: 80px;
-    color: #000000;
+    color: #ffffff;
 }
 
 .conteiner{
@@ -9,6 +9,7 @@ h1 {
     align-items: center;
     height: 20vh;
     width: 400px;
+    gap: 20px;
 }
 .boton {
     background-color: #ffffff;
@@ -18,7 +19,7 @@ h1 {
     padding: 10px 20px;
     margin: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s wa;
 }
 
 .botones:hover {

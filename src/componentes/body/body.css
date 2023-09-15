@@ -19,12 +19,12 @@ body {
 .Ropa.Oversize.Inicio {
   text-align: center;
   position: relative;
-  z-index: 1; /* Asegura que el contenido esté por encima del color de fondo */
+  z-index: 1; 
   padding: 20px;
 }
 
 .Texto {
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 40px;
   background-color: transparent;
   position: absolute;
@@ -41,7 +41,7 @@ body {
   border: none;
   cursor: pointer;
   position: absolute;
-  top: calc(50% + 40px); /* Ajusta la posición para que esté justo debajo del texto */
+  top: calc(50% + 40px); 
   left: 50%;
   transform: translateX(-50%);
 }
