@@ -17,8 +17,9 @@ const RegisterForm = () => {
 
   return (
     <div className="register-form"> 
-      <h2 className="registro">Registro</h2>
       <form>
+        <h2 className="registro">Registro</h2>
+        <br />
         <label>Nombre de usuario:</label>
         <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
         <br />
@@ -32,8 +33,8 @@ const RegisterForm = () => {
         <input type="password" value={repeatPassword} onChange={(e) => setRepeatPassword(e.target.value)} />
         <br />
         <button type="button" onClick={handleRegister}>Registrarse</button>
+        <p>¿Ya tienes una cuenta? <Link to="/login">Iniciar sesión</Link></p>
       </form>
-      <p>¿Ya tienes una cuenta? <Link to="/login">Iniciar sesión</Link></p> {/* Enlace a la página de inicio de sesión */}
     </div>
   );
 };

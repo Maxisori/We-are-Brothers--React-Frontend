@@ -9,7 +9,7 @@
 
 form {
   width: 300px;
-  padding: 20px;
+  padding: 70px;
   border: 1px solid #ccc;
   background-color: #f9f9f9;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -53,7 +53,6 @@ p {
   margin-top: 10px;
 }
 
-/* Estilos para el enlace de cambio entre formularios */
 span {
   color: #007bff;
   text-decoration: underline;

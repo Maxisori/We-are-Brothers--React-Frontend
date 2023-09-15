@@ -1,51 +1,47 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 body {
-    background-color: rgb(172, 127, 69);
-    font-family: 'Gilda Display', serif;
-    margin: 0;
-    padding: 0;;
+  font-family: 'Gilda Display', serif;
+  margin: 0;
+  padding: 0;
+  background-image: url(../../multimedia/image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  position: relative;
 }
-.foto {
-    display: block;
-    min-height: 92.3vh;
-    opacity: 0.6;
-    background-image: url(../../multimedia/image.png); 
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-}
+
 .Ropa.Oversize.Inicio {
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    background-repeat: no-repeat;
+  text-align: center;
+  position: relative;
+  z-index: 1; /* Asegura que el contenido esté por encima del color de fondo */
+  padding: 20px;
 }
+
 .Texto {
-    color: white;
-    position: absolute;
-    top: 47%;
-    left: 50%;
-    font-size: 40px;
-    transform: translate(-50%, -50%);
-}
-.b {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+  color: white;
+  font-size: 40px;
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .centered-button {
-    display: flex;
-    justify-content: center;
-    padding: 10px 20px;
-    background-color: #ffffff;
-    color: #000000;
-    border: none;
-    cursor: pointer;
+  width: 200px;
+  padding: 20px;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: calc(50% + 40px); /* Ajusta la posición para que esté justo debajo del texto */
+  left: 50%;
+  transform: translateX(-50%);
 }
