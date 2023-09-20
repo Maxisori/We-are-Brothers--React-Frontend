@@ -50,6 +50,22 @@ function App() {
               </>
             }
           /> 
+          <Route 
+            path='/redes'
+            element={
+              <>
+                <Header />
+              </>
+            }
+          /> 
+          <Route 
+            path='/envios'
+            element={
+              <>
+                <Header />
+              </>
+            }
+          />
 
         </Routes>
 
