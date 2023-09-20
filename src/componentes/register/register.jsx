@@ -18,12 +18,10 @@ const RegisterForm = ({ history }) => {
     } else if (password.length < 6) {
       setError('La contraseña debe tener al menos 6 caracteres.');
     } else {
-      // Aquí debes realizar el registro real y manejar los casos de éxito y error.
-      // Si hay éxito, establece el mensaje de éxito y redirige al usuario.
       setSuccessMessage('Registro exitoso. Ahora puedes iniciar sesión.');
       setTimeout(() => {
-        history.push('/login');
-      }, 2000); // Redirige al usuario después de 2 segundos (ajusta el tiempo según lo desees).
+        history.push('/home');
+      }, 2000); 
     }
   };
 
