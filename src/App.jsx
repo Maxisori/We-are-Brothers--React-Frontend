@@ -6,6 +6,7 @@ import Header from './componentes/header/header';
 import Body from './componentes/body/body';
 import Login from './componentes/login/login';
 import Register from './componentes/register/register'; 
+import Productos from './componentes/Productos/productos';
 function App() {
   return (
     <>
@@ -66,7 +67,15 @@ function App() {
               </>
             }
           />
-
+          <Route 
+            path='/productos'
+            element={
+              <>
+                <Header />
+                <Productos />
+              </>
+            }
+          />
         </Routes>
 
       </Router>
