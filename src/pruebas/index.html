@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Tienda de Ropa</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .producto {
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .carrito {
+            border: 1px solid #ccc;
+            padding: 20px;
+            width: 300px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .carrito h2 {
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        .boton-carrito {
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .boton-carrito:hover {
+            background-color: #45a049;
+        }
+
+        #listaCarrito img {
+            max-width: 50px;
+            max-height: 50px;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        .boton-eliminar {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .boton-eliminar:hover {
+            background-color: #d32f2f;
+        }
+
+        #totalCarrito {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Tu Tienda de Ropa</h1>
+    </header>
+
+    <div class="producto" id="producto1">
+        <h2>Remera Oversize blanca</h2>
+        <p>Precio: $5000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Remera Oversize Blanca', 5000, '/src/multimedia/blanca.jpeg')">Agregar al Carrito</button>
+    </div>
+
+    <div class="producto" id="producto2">
+        <h2>Remera Oversize celeste</h2>
+        <p>Precio: $4000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Remera Oversize Celeste', 4000, '/src/multimedia/celeste.jpeg')">Agregar al Carrito</button>
+    </div>
+
+    <div class="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="listaCarrito"></ul>
+        <p>Total: $<span id="totalCarrito">0.00</span></p>
+        <button class="boton-carrito" onclick="eliminarCarrito()">Eliminar Todo</button>
+        <button class="boton-carrito" onclick="irAPagar()">Ir a Pagar</button>
+    </div>
+
+    <script>
+        var carrito = [];
+        var totalCarrito = 0;
+
+        function agregarAlCarrito(nombre, precio, rutaImagen) {
+            // Agrega el producto al arreglo del carrito
+            carrito.push({ id: Date.now(), nombre: nombre, precio: precio, rutaImagen: rutaImagen });
+
+            // Actualiza la lista del carrito
+            actualizarCarrito();
+
+            // Actualiza el total del carrito
+            actualizarTotal();
+        }
+
+        function eliminarProducto(id) {
+            // Filtra el producto con el ID dado y lo elimina del carrito
+            carrito = carrito.filter(function (producto) {
+                return producto.id !== id;
+            });
+
+            // Actualiza la lista del carrito
+            actualizarCarrito();
+
+            // Actualiza el total del carrito
+            actualizarTotal();
+        }
+
+        function eliminarCarrito() {
+            // Elimina todos los productos del carrito
+            carrito = [];
+
+            // Actualiza la lista del carrito
+            actualizarCarrito();
+
+            // Actualiza el total del carrito
+            actualizarTotal();
+        }
+
+        function irAPagar() {
+            // Aquí puedes redirigir al usuario a la página de pago
+            // Por ejemplo: window.location.href = 'pagina_de_pago.html';
+            alert('Dirigiéndote a la página de pago...');
+        }
+
+        function actualizarCarrito() {
+            var listaCarrito = document.getElementById('listaCarrito');
+            listaCarrito.innerHTML = ''; // Limpia la lista antes de volver a agregar los elementos
+
+            // Agrega cada producto al carrito a la lista
+            carrito.forEach(function (producto) {
+                var nuevoItem = document.createElement('li');
+
+                // Agrega la imagen al elemento de lista
+                var imagen = document.createElement('img');
+                imagen.src = producto.rutaImagen;
+                nuevoItem.appendChild(imagen);
+
+                // Agrega el nombre y el precio al elemento de lista
+                nuevoItem.innerHTML += `${producto.nombre} - $${producto.precio.toFixed(2)}`;
+
+                // Agrega el botón de eliminación
+                var botonEliminar = document.createElement('button');
+                botonEliminar.className = 'boton-eliminar';
+                botonEliminar.innerText = 'Eliminar';
+                botonEliminar.onclick = function () {
+                    eliminarProducto(producto.id);
+                };
+                nuevoItem.appendChild(botonEliminar);
+
+                listaCarrito.appendChild(nuevoItem);
+            });
+        }
+
+        function actualizarTotal() {
+            totalCarrito = carrito.reduce(function (total, producto) {
+                return total + producto.precio;
+            }, 0);
+
+            // Actualiza el total en el HTML
+            document.getElementById('totalCarrito').innerText = totalCarrito.toFixed(2);
+        }
+    </script>
+</body>
+</html>

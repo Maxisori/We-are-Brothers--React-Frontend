@@ -6,7 +6,11 @@ import Header from './componentes/header/header';
 import Body from './componentes/body/body';
 import Login from './componentes/login/login';
 import Register from './componentes/register/register'; 
+<<<<<<< HEAD
+
+=======
 import Productos from './componentes/Productos/productos';
+>>>>>>> e1202d3414870ab2900f7674555d9e4b493bea29
 function App() {
   return (
     <>
@@ -67,6 +71,9 @@ function App() {
               </>
             }
           />
+<<<<<<< HEAD
+          
+=======
           <Route 
             path='/productos'
             element={
@@ -76,9 +83,12 @@ function App() {
               </>
             }
           />
+>>>>>>> e1202d3414870ab2900f7674555d9e4b493bea29
         </Routes>
 
       </Router>
+
+      
     </>    
   );
 }

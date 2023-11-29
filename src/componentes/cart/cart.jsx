@@ -20,7 +20,7 @@ function Cart() {
     };
 
     const goToPayment = () => {
-        alert('Ir a la página de pago');
+        alert('Su pago se realizo con exito');
     };
 
     return (

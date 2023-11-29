@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: 'Gilda Display', serif;
   margin: 0;
@@ -15,7 +14,6 @@ body {
   height: 100vh;
   position: relative;
 }
-
 .Ropa.Oversize.Inicio {
   text-align: center;
   position: relative;
@@ -44,4 +42,47 @@ body {
   top: calc(50% + 40px); 
   left: 50%;
   transform: translateX(-50%);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #f4f4f4;
+  padding: 20px;
+  font-family: 'Gilda Display', serif;
+}
+
+.producto {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  width: 200px; /* Ajusta el tamaño según tus necesidades */
+}
+
+.producto img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.precio {
+  color: #333;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.boton-carrito {
+  background-color: #2b2b2b;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Gilda Display', serif;
 }
