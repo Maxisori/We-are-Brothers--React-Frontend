@@ -7,19 +7,20 @@ const LoginForm = ({ history }) => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const handleLogin = () => {
+  const handleLogin = async () => {
     if (email.trim() === '' || password.trim() === '') {
       setError('Por favor, complete todos los campos.');
     } else if (password.length < 6) {
       setError('La contraseña debe tener al menos 6 caracteres.');
     } else {
-      // Aquí debes realizar la autenticación real y manejar los casos de éxito y error.
-      // Si hay éxito, establece el mensaje de éxito y redirige al usuario al "home".
       setError('');
-      // Simulación de éxito y redirección después de 2 segundos (ajusta el tiempo según lo desees).
-      setTimeout(() => {
-        history.push('/home');
-      }, 2000);
+
+      const userData = {
+        username: '', 
+        email,
+        password,
+        password2: '', 
+      };
     }
   };
 

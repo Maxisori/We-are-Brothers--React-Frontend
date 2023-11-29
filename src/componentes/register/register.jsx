@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import './register.css';
 
 const RegisterForm = ({ history }) => {
@@ -10,7 +11,7 @@ const RegisterForm = ({ history }) => {
   const [error, setError] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
 
-  const handleRegister = () => {
+  const handleRegister = async () => {
     if (username.trim() === '' || email.trim() === '' || password.trim() === '' || repeatPassword.trim() === '') {
       setError('Por favor, complete todos los campos.');
     } else if (password !== repeatPassword) {
@@ -18,12 +19,21 @@ const RegisterForm = ({ history }) => {
     } else if (password.length < 6) {
       setError('La contraseña debe tener al menos 6 caracteres.');
     } else {
-      // Aquí debes realizar el registro real y manejar los casos de éxito y error.
-      // Si hay éxito, establece el mensaje de éxito y redirige al usuario.
-      setSuccessMessage('Registro exitoso. Ahora puedes iniciar sesión.');
-      setTimeout(() => {
-        history.push('/login');
-      }, 2000); // Redirige al usuario después de 2 segundos (ajusta el tiempo según lo desees).
+      try {
+        await axios.post('https://localhost:8080/registro', {
+          username,
+          email,
+          password,
+        });
+
+        setSuccessMessage('Registro exitoso. Ahora puedes iniciar sesión.');
+        setTimeout(() => {
+          history.push('/login');
+        }, 2000); // Redirige al usuario después de 2 segundos (ajusta el tiempo según lo desees).
+      } catch (error) {
+        setError('Error al registrarse');
+        console.log('Error al registrarse ', error);
+      }
     }
   };
 
