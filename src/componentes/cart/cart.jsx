@@ -25,7 +25,7 @@ function Cart() {
 
     return (
         <div>
-            <h1 className='carrito'>Carrito de Compras</h1>
+            <h1 className='carrito de compras'>Carrito de Compras</h1>
                 <div className='conteiner'>
                     <button className="boton2" onClick={addItem}>Agregar Ítem</button>
                     <button className="boton2" onClick={deleteAllItems}>Eliminar Todo</button>

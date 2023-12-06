@@ -1,19 +1,16 @@
 import React from 'react';
 import './body.css'; 
 
-
-
-
 export default function Body() {
   return (
-
     <>
-    <div class="producto" id="producto1">
-        <h2>Producto 1</h2>
-        <p>Precio: $50.00</p>
-        <button class="boton-carrito" onclick="agregarAlCarrito('Producto 1', 50.00, 'https://acortar.link/lEeOpj')">Agregar al Carrito</button>
+    <div class="producto">
+      <img className='imagen-producto' src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI5UbDe-md36cDRZkcBELXNjvRBG_uO2T1UQ&usqp=CAU'} alt='Remera Oversize' />
+        <h2 className='nombreproducto' >Remera Oversize</h2>
+        <p className='precio' >Precio: $3000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Remera Oversize', 3000,)">Agregar al Carrito</button>
     </div>
-    <script src="/src/componentes/cart/cart.jsx"></script>
   </>
   );
 }
+

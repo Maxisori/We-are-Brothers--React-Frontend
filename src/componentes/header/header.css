@@ -17,14 +17,34 @@
     align-items: center;
 }
 
-.linav {
+.linav-envios {
     text-decoration: none;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 40px;
+    margin-right: 40px;
     font-size: 20px;
     white-space: nowrap;
 }
-
+.linav-redes{
+    text-decoration: none;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 20px;
+    white-space: nowrap;
+}
+.linav-sesion{
+    text-decoration: none;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 20px;
+    white-space: nowrap;
+}
+.linav-carrito{
+    text-decoration: none;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 20px;
+    white-space: nowrap;
+}
 .h1title {
     display: flex;
     justify-content: center;

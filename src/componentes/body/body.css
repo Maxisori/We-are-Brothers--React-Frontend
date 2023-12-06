@@ -7,82 +7,38 @@ body {
   font-family: 'Gilda Display', serif;
   margin: 0;
   padding: 0;
-  background-image: url(../../multimedia/image.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size:cover;
   background-attachment: fixed;
   height: 100vh;
   position: relative;
+  background-color: #2b2b2b;
 }
-.Ropa.Oversize.Inicio {
-  text-align: center;
-  position: relative;
-  z-index: 1; 
-  padding: 20px;
-}
-
-.Texto {
-  color: rgb(255, 255, 255);
-  font-size: 40px;
-  background-color: transparent;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.centered-button {
-  width: 200px;
-  padding: 20px;
-  background-color: #ffffff;
-  color: #000000;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  top: calc(50% + 40px); 
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  background-color: #f4f4f4;
-  padding: 20px;
-  font-family: 'Gilda Display', serif;
-}
-
 .producto {
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin: 10px;
   text-align: center;
-  width: 200px; /* Ajusta el tamaño según tus necesidades */
+  width: 400px; 
+  height: 400px;
 }
-
-.producto img {
-  max-width: 100%;
-  border-radius: 4px;
+.nombreproducto{
+  font-size: 30px;
+  font-family: 'Gilda Display', serif;
 }
-
-.precio {
-  color: #333;
-  font-size: 18px;
-  margin: 10px 0;
+.precio{
+  font-family: 'Gilda Display', serif;
+  font-size: 15px;
 }
-
 .boton-carrito {
   background-color: #2b2b2b;
   color: #fff;
-  padding: 10px 20px;
+  padding: 8px 16px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 13px;
   font-family: 'Gilda Display', serif;
+  width: 170px; 
 }
