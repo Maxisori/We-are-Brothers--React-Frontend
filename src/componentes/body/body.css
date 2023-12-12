@@ -5,15 +5,14 @@
 }
 body {
   font-family: 'Gilda Display', serif;
-  margin: 0;
-  padding: 0;
   background-repeat: no-repeat;
   background-size:cover;
-  background-attachment: fixed;
-  height: 100vh;
+  height: 89vh;
   position: relative;
-  background-color: #2b2b2b;
+  background-image: url(/src/multimedia/image.png);
+  max-width: 100%;
 }
+
 .producto {
   background-color: #fff;
   border-radius: 8px;
