@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Gilda Display', serif;
+
 }
 
 .sectionMain {
@@ -17,43 +19,50 @@
     align-items: center;
 }
 
-.linav-envios {
+.linav-envios a{
     text-decoration: none;
     margin-left: 40px;
     margin-right: 40px;
     font-size: 20px;
     white-space: nowrap;
+    color: black;
 }
-.linav-redes{
+
+.linav-redes a{
     text-decoration: none;
     margin-left: 40px;
     margin-right: 40px;
     font-size: 20px;
     white-space: nowrap;
+    color: black;
 }
-.linav-sesion{
+
+.linav-sesion a{
     text-decoration: none;
     margin-left: 40px;
     margin-right: 40px;
     font-size: 20px;
     white-space: nowrap;
+    color: black;
 }
-.linav-carrito{
+
+.linav-carrito a{
     text-decoration: none;
     margin-left: 40px;
     margin-right: 40px;
     font-size: 20px;
     white-space: nowrap;
+    color: black;
 }
 .h1title {
     display: flex;
     justify-content: center;
     margin: 1px;
     text-align: center;
-    font-family: 'Gilda Display', serif;
     font-size: 40px;
     line-height: 0.8;
 }
+
 
 .h1title a {
     text-decoration: none;
