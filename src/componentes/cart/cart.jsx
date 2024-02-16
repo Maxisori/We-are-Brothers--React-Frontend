@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import './cart.css'
+import React, { useState, useEffect, } from 'react';
+import './cart.css';
 
 function Cart() {
     const [items, setItems] = useState([]);
+    
 
     const addItem = () => {
         const newItem = `Ítem ${items.length + 1}`;

@@ -12,7 +12,10 @@ body {
   background-image: url(/src/multimedia/image.png);
   max-width: 100%;
 }
-
+.imagen-producto {
+  width: 200px;
+  height: 200px;
+}
 .producto {
   background-color: #fff;
   border-radius: 8px;
@@ -57,7 +60,6 @@ body {
   text-decoration: none;
   
 }
-
 .src {
   width: 200px;
   height: 100px;
