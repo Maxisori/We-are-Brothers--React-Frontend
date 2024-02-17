@@ -20,16 +20,14 @@ const RegisterForm = ({ history }) => {
       setError('La contraseña debe tener al menos 6 caracteres.');
     } else {
       try {
-        await axios.post('https://localhost:8080/registro', {
+        await axios.post('http://localhost:8080/registro', {
           username,
           email,
           password,
         });
 
         setSuccessMessage('Registro exitoso. Ahora puedes iniciar sesión.');
-        setTimeout(() => {
-          history.push('/login');
-        }, 2000); // Redirige al usuario después de 2 segundos (ajusta el tiempo según lo desees).
+        
       } catch (error) {
         setError('Error al registrarse');
         console.log('Error al registrarse ', error);

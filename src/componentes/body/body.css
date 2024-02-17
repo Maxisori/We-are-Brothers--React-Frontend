@@ -14,16 +14,17 @@ body {
 }
 .imagen-producto {
   width: 200px;
-  height: 200px;
+  height: 250px;
+  object-fit: cover;
 }
 .producto {
   background-color: #fff;
   border-radius: 8px;
-  padding: 20px;
+  padding: 10px;
   margin: 10px;
+  width: 250px;
   text-align: center;
-  width: 400px; 
-  height: 400px;
+  padding-top: 15px;
 }
 .producto2 {
   background-color: #fff;
@@ -35,7 +36,7 @@ body {
   height: 400px;
 }
 .nombreproducto{
-  font-size: 30px;
+  font-size: 20px;
   font-family: 'Gilda Display', serif;
 }
 .nombreproducto2{
@@ -64,4 +65,24 @@ body {
   width: 200px;
   height: 100px;
   padding: 10px;
+}
+
+.body {
+  display: flex;
+  width: 100%;
+  gap: 1em;
+}
+
+.body > * {
+  width: 50%;
+}
+
+.carrito_de_compras {
+  color: white;
+}
+
+.carrito_contenido {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 import './body.css'; 
-import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -77,21 +76,24 @@ export default function Body() {
           <p className='precio' >Precio: $3000</p>
           <button class="boton-carrito"><Link className='boton-carrito' to="/"> Agregar al Carrito </Link>  </button>
       </div> */}
-      {data.map(producto => (
-          <div className="producto" key={producto.id}>
-              <img className='imagen-producto' src={producto.img} alt={producto.name} />
-              <h2 className='nombreproducto'>{producto.name}</h2>
-              <p className='precio'>Precio: {producto.price}</p>
-              <button className="boton-carrito" onClick={() => addItem(producto)}>Agregar al Carrito</button>
-          </div>
-      ))}
-      <div>
-            <h1 className='carrito de compras'>Carrito de Compras</h1>
+      <div className="body">
+        <div>
+          {data.map(producto => (
+              <div className="producto" key={producto.id}>
+                  <img className='imagen-producto' src={producto.img} alt={producto.name} />
+                  <h2 className='nombreproducto'>{producto.name}</h2>
+                  <p className='precio'>Precio: {producto.price}</p>
+                  <button className="boton-carrito" onClick={() => addItem(producto)}>Agregar al Carrito</button>
+              </div>
+          ))}
+        </div>
+        <div>
+            <h1 className='carrito_de_compras'>Carrito de Compras</h1>
                 <div className='conteiner'>
                     <button className="boton2" onClick={deleteAllItems}>Eliminar Todo</button>
                     <button className="boton2" onClick={goToPayment}>Ir a Pagar</button>
                 </div>
-            <ul>
+            <div className="carrito_contenido">
             {Object.values(items).map(producto => (
                 <div className="producto" key={producto.id}>
                     <img className='imagen-producto' src={producto.img} alt={producto.name} />
@@ -100,8 +102,9 @@ export default function Body() {
                     <button className="boton-carrito" onClick={() => deleteItem(producto.id)}>Quitar al Carrito</button>
                 </div>
             ))}
-            </ul>
+            </div>
         </div>
+      </div> 
     </body>    
   </>
   );

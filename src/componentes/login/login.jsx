@@ -1,28 +1,31 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './login.css';
+import axios from 'axios';
 
 const LoginForm = ({ history }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
 
   const handleLogin = async () => {
     if (email.trim() === '' || password.trim() === '') {
-      setError('Por favor, complete todos los campos.');
+      alert('Por favor, complete todos los campos.');
     } else if (password.length < 6) {
-      setError('La contraseña debe tener al menos 6 caracteres.');
-    } else {
-      setError('');
-
-      const userData = {
-        username: '', 
-        email,
-        password,
-        password2: '', 
-      };
+      alert('La contraseña debe tener al menos 6 caracteres.');
     }
-  };
+
+    try {
+      await axios.post('http://localhost:8080/login', {
+        email,
+        password
+      });
+
+        alert("Login exitoso");
+      } catch (error) {
+        alert("Login fallido");
+        console.log("Error al ingresar: ", error);
+      }
+    }
 
   return (
     <div className="todo1">
@@ -36,7 +39,6 @@ const LoginForm = ({ history }) => {
         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         <br />
         <button type="button" onClick={handleLogin}>Iniciar sesión</button>
-        {error && <div className="error-message">{error}</div>}
         <p>¿No tienes una cuenta? <Link to="/registro">Regístrese</Link></p>
       </form>
     </div>
