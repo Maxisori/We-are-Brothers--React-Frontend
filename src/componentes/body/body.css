@@ -12,6 +12,14 @@ body {
   background-image: url(/src/multimedia/image.png);
   max-width: 100%;
 }
+.barra-de-busqueda{
+  width: 400px;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 460px;
+  background-color: white;
+}
 .imagen-producto {
   width: 200px;
   height: 250px;

@@ -2,6 +2,8 @@ import React from 'react';
 import './body.css'; 
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
 
 export default function Body() {
     const [items, setItems] = useState([]);
@@ -69,6 +71,9 @@ export default function Body() {
     };
   return (
     <>
+    <div className='barra-de-busqueda' >
+      <TextField fullWidth label="fullWidth" id="fullWidth" />
+    </div>
     <body>
       {/* <div class="producto">
         <img className='imagen-producto' src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI5UbDe-md36cDRZkcBELXNjvRBG_uO2T1UQ&usqp=CAU'} alt='Remera Oversize' />
