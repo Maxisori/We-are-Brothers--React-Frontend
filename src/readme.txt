@@ -34,3 +34,10 @@ que se le proporciona al modelo. Esta palabra es una parte del texto que se util
 respuesta o iniciar una interacción con el modelo. Por ejemplo, si el prompt es "Escribe un breve poema sobre 
 el amor", entonces "poema" sería una palabra del prompt. Básicamente, equivale a una parte específica de la 
 instrucción que se utiliza para dirigir la respuesta del modelo.
+
+En el contexto de los modelos de lenguaje como GPT, un "token" es una unidad básica de texto, 
+que puede ser una palabra, un número, un signo de puntuación, o incluso un segmento más grande de texto. 
+Cuando se proporciona un prompt al modelo, este prompt se convierte en una secuencia de tokens que el modelo 
+utiliza para generar una respuesta.
+
+Un ejemplopuede ser Supongamos que el prompt es: "Escribe un cuento sobre un gato". El token es "Gato"
